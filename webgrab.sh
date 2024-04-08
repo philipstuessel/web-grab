@@ -11,11 +11,9 @@ wg_core() {
         DIR=$(pwd)
     else
         if [ ! -d "$2" ]; then
-            echo "${RED}\"$2\" this directory does not exist.${NC}"
-            return 1
-        else
-            DIR="$2"
+            mkdir -p "$2"
         fi
+        DIR="$2"
     fi
 
     if [[ -e "$1" ]]; then
@@ -38,7 +36,7 @@ wg_core() {
 wg() {
     if [[ "$1" == "v" || "$1" == "-v" ]]; then
         echo "${BLUE}Web Grab 🚛${NC}"
-        echo "${BOLD}v.0.1.0${NC}"
+        echo "${BOLD}v.0.1.1${NC}"
         echo "${YELLOW}JAP plugin${NC}"
     elif [[ "$1" == "i" || "$1" == "install" ]]; then
         wg_check
