@@ -1,3 +1,4 @@
+#!/bin/zsh
 wg_check() {
     if [ ! -f "$(pwd)/webgrab.json" ]; then
         echo "${RED}webgrab.json File not found${NC}"

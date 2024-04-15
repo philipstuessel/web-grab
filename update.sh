@@ -1,1 +1,0 @@
-echo $(mkdir -p ~/jap/plugins/packages/ && curl -o ~/jap/plugins/packages/webgrab.sh https://raw.githubusercontent.com/philipstuessel/web-grab/main/webgrab.sh)
